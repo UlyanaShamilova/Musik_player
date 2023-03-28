@@ -8,7 +8,7 @@ class App(ctk.CTk):
         self.APP_HEIGHT = app_height
         self.SCREEN_WIDTH = self.winfo_screenwidth()
         self.SCREEN_HEIGHT = self.winfo_screenheight()
-        self.geometry(f"{454}x{469}+{700}+{150}")
+        self.geometry(f"{self.APP_WIDTH}x{self.APP_HEIGHT}+{700}+{150}")
         self.resizable(False,False)
         self.title("Music_player")
         self.FRAME = m_frame.My_Frame(text = "назви треків що додано.", master = self, width = 233, height = 367, border_width = 5, fg_color = "#BDBDBD", border_color = "#000000", corner_radius = 20)
@@ -16,7 +16,6 @@ class App(ctk.CTk):
         self.FRAME1 = m_frame.My_Frame(text= "", master = self,width = 169, height = 298, border_width = 5, fg_color = "#4CB7CE", border_color="#4CB7CE", corner_radius =20)
         self.FRAME1.grid(row = 0, column = 1, padx = 20, pady = 10, sticky=ctk.SW)
         
-
 
 app = App(454,469)
 app.configure(bg = "#4CB7CE")

@@ -3,7 +3,7 @@ import modules.create_app as m_app
 from PIL import Image
 import modules.find_path as m_path
 import modules.font as m_font
-
+import modules.sounds as m_sounds
 button_play = ctk.CTkButton(
     master = m_app.app.FRAME1,
     width = 169,
@@ -14,6 +14,7 @@ button_play = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
+    command = m_sounds.play,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_play.png")),
     size = (82, 43)))
@@ -29,6 +30,7 @@ button_stop = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
+    command = m_sounds.stop,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_stop.png")),
     size = (45, 43)))
@@ -44,6 +46,7 @@ button_pause = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
+    command = m_sounds.pause,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_pause.png")),
     size = (50, 50)))
@@ -89,6 +92,7 @@ button_sound_plus = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
+    command = m_sounds.volum_plus,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_sound+.png")),
     size = (28, 31)))
@@ -104,6 +108,7 @@ button_sound_minus = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
+    command= m_sounds.volum_minus,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_sound-.png")),
     size = (28, 31)))
@@ -118,6 +123,7 @@ button_mix = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
+    command = m_sounds.mix,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_mix.png")),
     size = (30, 20)))
@@ -148,6 +154,7 @@ button_plus = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "+",
+    text_color = "black",
     font = m_font.font
     )
 
