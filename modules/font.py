@@ -8,6 +8,6 @@ font = ctk.CTkFont(
 
 font_label = ctk.CTkFont(
     family = "Inter",
-    size = 16,
+    size = 14,
     weight = "bold"
 )
