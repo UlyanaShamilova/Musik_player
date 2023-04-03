@@ -19,11 +19,6 @@ list_sounds1 = ["another_love",
                "me_gustas_tu",
                "sweater_weather"]
 
-dict_sounds = {"another_love",
-               "i_am_yours",
-               "me_gustas_tu",
-               "sweater_weather"}
-
 pygame.mixer.music.load(list_sounds[0])
 pygame.mixer.music.set_volume(0.3)
 
