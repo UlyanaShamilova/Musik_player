@@ -132,7 +132,7 @@ def input_before():
 def input_play():
     for track in list_sounds1:
         track = (index1 + 1)% len(list_sounds1)
-        play_print_index = track - 2
+        play_print_index = track - 1
         current_track = ctk.CTkLabel(
             master = m_app.app,
             width = 160,
@@ -144,17 +144,23 @@ def input_play():
         )
         current_track.place(x = 270, y = 15)
 
+def clear_frame(frame):
+    widgets = frame.winfo_children()
+    for widget in widgets:
+        widget.destroy()
 index = 0
 def delete():
     global index
     del list_sounds[index]
     if index >= len(list_sounds):
         index = 0
-    FRAME_TRACK = m_frame.My_Frame(text = "", master = m_app.app, width = 150, height = 69, border_width = 5, fg_color = "#BDBDBD", border_color = "#BDBDBD", corner_radius = 0)
-    FRAME_TRACK.grid(row = 0, column = 0, padx = 5 , pady = 10)
     pygame.mixer.music.load(list_sounds[index])
     pygame.mixer.music.play()
-    for index in list_sounds:
-        label = ctk.CTkLabel(master = m_app.app.FRAME_TRACK, text_color= "black", font = m_font.font_label, text = index)
-        label.pack(fill = "x", anchor = "w") 
-    print(list_sounds)
+    clear_frame(m_app.app.FRAME_TRACK)
+    index = [os.path.splitext(os.path.basename(track))[0]for track in list_sounds ]
+    print(index)
+
+    
+    for track in index:
+        label = ctk.CTkLabel (master=m_app.app.FRAME_TRACK, text_color="black", font= m_font.font_label,text= track)
+        label.pack(fill="x", anchor="w")
