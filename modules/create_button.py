@@ -46,7 +46,7 @@ button_pause = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
-    command = m_sounds.pause,
+    command = m_sounds.pause_track,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_pause.png")),
     size = (50, 50)))
@@ -94,7 +94,7 @@ button_sound_plus = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
-    command = m_sounds.volum_plus,
+    command = m_sounds.volume_plus,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_sound+.png")),
     size = (28, 31)))
@@ -110,7 +110,7 @@ button_sound_minus = ctk.CTkButton(
     fg_color = "#BDBDBD",
     bg_color = "#4CB7CE",
     text = "",
-    command= m_sounds.volum_minus,
+    command= m_sounds.volume_minus,
     image = ctk.CTkImage
     (light_image=Image.open(m_path.search_path("images/button_sound-.png")),
     size = (28, 31)))
@@ -159,7 +159,7 @@ button_plus = ctk.CTkButton(
     text = "+",
     command= m_sounds.add_track,
     text_color = "black",
-    font = m_font.font
+    font = m_font.font_plus
     )
 
 button_plus.place(x = 20, y = 400, anchor = ctk.NW)
