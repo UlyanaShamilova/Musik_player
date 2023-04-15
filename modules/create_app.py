@@ -16,11 +16,10 @@ class App(ctk.CTk):
         self.FRAME1 = m_frame.My_Frame(text= "", master = self,width = 169, height = 298, border_width = 5, fg_color = "#4CB7CE", border_color="#4CB7CE", corner_radius =20)
         self.FRAME1.grid(row = 0, column = 1, padx = 20, pady = 10, sticky=ctk.SW)
         self.FRAME_TRACK = m_frame.My_Frame(text = "", master = self, width = 200, height = 200, border_width = 5, fg_color = "#BDBDBD", border_color = "#BDBDBD", corner_radius = 0)
-        self.FRAME_TRACK.place(x = 25, y = 20)
+        self.FRAME_TRACK.place(x = 30, y = 20)
         self.FRAME_CURR_TRACK = m_frame.My_Frame(text = "", master = self, width = 220, height = 59, border_width = 5, fg_color = "#4CB7CE", border_color = "#4CB7CE", corner_radius = 0)
         self.FRAME_CURR_TRACK.place(x = 240, y = 15)
         
 
 app = App(454,469)
 app.configure(bg = "#4CB7CE")
-app.iconbitmap("D:\project\images\music_player.png")

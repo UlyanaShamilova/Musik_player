@@ -143,26 +143,26 @@ def add_track():
         update_tracks()
   
 def update_tracks():
-    # расположение текста по иксу
-    text_x = 10
+    global label
+    #расположение текста по иксу
+    textx = 10
     # расположение текста по игрику
-    text = 10
-    # перебераем все виджеты которые находяться на фрейме 
-    for widget in m_app.app.FRAME.winfo_children():
-        # уничтожаем старые и добавляем новые значение
+    texty = 10
+    # перебираем все виджеты которые находяться на фрейме 
+    for widget in m_app.app.FRAME_TRACK.winfo_children():
         widget.destroy()
-        # перебераем все виджеты которые находяться на другом фрейме 
+    # перебираем все виджеты которые находяться на другом фрейме 
     for widget in m_app.app.FRAME_CURR_TRACK.winfo_children():
         widget.destroy()
-        # перебираем список и выводим треки на фрейм
+    # перебираем список и выводим треки на фрейм
     for i, track in enumerate(list_sounds1):
         label = ctk.CTkLabel(
         master = m_app.app.FRAME_TRACK, 
         text = f"{track}", 
         text_color = "black", 
         font = m_font.font_label)
-        label.place(x = text_x, y = text)
-        text = text + 30
+        label.place(x = textx, y = texty)
+        texty = texty + 30
 
     
 def delete():
